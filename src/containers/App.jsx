@@ -1,4 +1,5 @@
 import React from 'react';
+import { createGlobalStyle } from 'styled-components';
 
 import Main from '../components/Main';
 import SideBar from '../components/SideBar';
@@ -9,9 +10,20 @@ import Experience from '../components/Experience';
 import Certificate from '../components/Certificate';
 import Skills from '../components/Skills';
 
+const GlobalStyle = createGlobalStyle`
+    body{
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #F5F5F5;
+    }
+    
+`;
+
 const App = ( )=>{
     return(
         <Main>
+            <GlobalStyle/>
             <SideBar>
                 <About/>
 
